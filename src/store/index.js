@@ -1,8 +1,9 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
+//slice is defines some initial state
 const songsSlice = createSlice({
   name: "song",
-  initialState: [],
+  initialState: ["deneme1", "deneme2"],
   reducers: {
     addSongs(state, action) {
       state.push(action.payload);
@@ -19,4 +20,13 @@ const store = configureStore({
   },
 });
 
-console.log(store);
+const startingState = store.getState();
+console.log(JSON.stringify(startingState));
+
+store.dispatch({
+  type: "song/addSong",
+  payload: "New Song",
+});
+
+const finalState = store.getState();
+console.log(JSON.stringify(finalState));
