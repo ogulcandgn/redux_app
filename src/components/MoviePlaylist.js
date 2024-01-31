@@ -1,5 +1,3 @@
-import { createRandomMovie } from "../data";
-
 function MoviePlaylist() {
   // To Do:
   // Get list of movies
@@ -33,12 +31,7 @@ function MoviePlaylist() {
       <div className="table-header">
         <h3 className="subtitle is-3">Movie Playlist</h3>
         <div className="buttons">
-          <button
-            onClick={() => handleMovieAdd(createRandomMovie())}
-            className="button is-link"
-          >
-            + Add Movie to Playlist
-          </button>
+          <button className="button is-link">+ Add Movie to Playlist</button>
         </div>
       </div>
       <ul>{renderedMovies}</ul>

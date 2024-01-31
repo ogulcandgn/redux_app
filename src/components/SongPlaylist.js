@@ -1,5 +1,3 @@
-import { createRandomSong } from "../data";
-
 function SongPlaylist() {
   // To Do:
   // Get list of songs
@@ -33,12 +31,7 @@ function SongPlaylist() {
       <div className="table-header">
         <h3 className="subtitle is-3">Song Playlist</h3>
         <div className="buttons">
-          <button
-            onClick={() => handleSongAdd(createRandomSong())}
-            className="button is-link"
-          >
-            + Add Song to Playlist
-          </button>
+          <button className="button is-link">+ Add Song to Playlist</button>
         </div>
       </div>
       <ul>{renderedSongs}</ul>
